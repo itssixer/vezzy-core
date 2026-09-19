@@ -1,0 +1,18 @@
+:root {
+  --vezzy-bg: #0a0a0a;
+  --vezzy-canvas: #1a1a1a;
+  --vezzy-panel: #1c1c1c;
+  --vezzy-bar: #141414;
+  --vezzy-line: #333;
+  --vezzy-text: #f5f5f5;
+  --vezzy-muted: rgba(255, 255, 255, 0.42);
+  --vezzy-dim: rgba(255, 255, 255, 0.55);
+  --vezzy-sky: #9ec5ff;
+  --vezzy-rail: #4fa3ff;
+  --vezzy-run: #6dff7a;
+  --vezzy-fail: #ff6b6b;
+  --vezzy-radius: 2px;
+  --vezzy-font: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --vezzy-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --vezzy-dot: radial-gradient(rgba(255, 255, 255, 0.055) 0.7px, transparent 0.8px);
+}

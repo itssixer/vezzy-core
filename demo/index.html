@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vezzy Core</title>
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <meta property="og:title" content="Vezzy Core" />
+  <meta property="og:description" content="Open-core UI and in-browser HTML, CSS, and JS execution loop." />
+  <meta property="og:image" content="https://github.com/itssixer/vezzy-core/raw/main/assets/vezzy-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/ui.css" />
+</head>
+<body>
+  <div class="desk">
+    <aside class="app-nav">
+      <a class="brand" href="https://vezzy.app">
+        <img src="../assets/vezzy-logo.png" alt="Vezzy" width="118" height="39" />
+        <span class="alpha-pill">Open Core</span>
+      </a>
+      <nav class="nav-list">
+        <button class="nav-btn is-on" type="button" data-view="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg>
+          <span>// HOME</span>
+        </button>
+        <button class="nav-btn" type="button" data-view="workspace">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m8 8-5 4 5 4"/><path d="m16 8 5 4-5 4"/><path d="m14 5-4 14"/></svg>
+          <span>// WORKSPACE</span>
+        </button>
+      </nav>
+      <div class="nav-end">
+        <div class="user-chip">
+          <span class="user-av">V</span>
+          <span class="user-meta">
+            <strong>guest</strong>
+            <em>OPEN_CORE</em>
+          </span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="app-body">
+      <section class="view" id="view-home">
+        <header class="topbar">
+          <h2>/workspace/guest</h2>
+          <button class="btn-primary" id="open-workspace" type="button">Open workspace</button>
+        </header>
+        <div class="home-scroll">
+          <section class="home-sec">
+            <div class="sec-head"><h3>This repository</h3></div>
+            <article class="proj">
+              <strong class="proj-name">vezzy-core</strong>
+              <span class="proj-meta">Public utility layer. Design tokens, layout frames, in-browser run loop.</span>
+            </article>
+          </section>
+          <section class="home-sec">
+            <div class="sec-head"><h3>Starter</h3></div>
+            <div class="tpl-row">
+              <button class="tpl" id="open-blank" type="button">
+                <strong>Blank page</strong>
+                <span>Empty HTML, CSS, and JS. Build from scratch in the demo workspace.</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-workspace" hidden>
+        <header class="work-bar">
+          <input class="work-name" id="work-name" value="hello-vezzy" maxlength="48" spellcheck="false" />
+          <span class="work-tag">[ OPEN CORE ]</span>
+          <button class="btn-run" id="run-btn" type="button" title="Run (Ctrl+Enter)">RUN</button>
+        </header>
+        <div class="work-grid">
+          <section class="pane">
+            <div class="pane-bar">Files</div>
+            <div class="file-list" id="file-list"></div>
+          </section>
+          <section class="pane">
+            <div class="pane-bar tabs" id="file-tabs"></div>
+            <div class="editor-wrap">
+              <div class="gutter" id="gutter">1</div>
+              <textarea id="code" spellcheck="false" aria-label="Editor"></textarea>
+            </div>
+            <div class="status-bar">
+              <span id="status-file">index.html</span>
+              <span id="status-save">[OK]</span>
+            </div>
+          </section>
+          <section class="pane output">
+            <div class="pane-bar">
+              <button class="out-tab is-on" type="button" data-out="preview">Preview</button>
+              <button class="out-tab" type="button" data-out="console">Console</button>
+              <span class="preview-url">srcdoc://hello-vezzy</span>
+            </div>
+            <iframe id="preview" title="Preview" sandbox="allow-scripts allow-modals"></iframe>
+            <pre class="console" id="console" hidden></pre>
+          </section>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

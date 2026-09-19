@@ -1,0 +1,24 @@
+{
+  "name": "vezzy-core",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "description": "Open-core UI and in-browser HTML, CSS, and JS execution loop for Vezzy.",
+  "homepage": "https://vezzy.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itssixer/vezzy-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itssixer/vezzy-core/issues"
+  },
+  "keywords": [
+    "vezzy",
+    "html",
+    "css",
+    "javascript",
+    "education",
+    "workspace",
+    "open-core"
+  ]
+}
